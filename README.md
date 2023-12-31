@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+# Logistics UK - Technical Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of this exercise was to develop a react application following the wireframe provided and the requirements laid out in the exercise.
 
-## Available Scripts
+The application provides routing for four pages as defined in the `src/data/menu.json`; Home, Drivers, Vehicles, and About, Vehicles and About both route to a place holder page, Home and Driver route to the `Drivers` component. These pages can be accessed through the menu on the upper-left hand side through a `NavMenu` component.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The `Drivers` component is the core functionality of the application, the presented table is populated from the `src/data/drivers.json`. It provides the driver name, vehicle registration, and time worked in minutes, split by drive, rest, work, and available time. The final cell is occupied by a `Trace` component, which generates a set of formatted boxes for each day of the week, if the driver has a trace for a given day, it is filled in green. 
+### Running
+To run the application, simply run the command `npm start` in the `logistics-uk-app/` directory, it will launch on port `3000`, if this unavailable you will be prompted to accept another port.
+### Improvements
+1. Centralise style sheets, avoid hardcoding styles into components.
+2. Provide more testing through the `npm test` command.
+3. The application is currently assuming that the provided driver traces exist in the same work, provide a way to manage and display individual weeks.
+4. Provide a docker build file and build pipeline of the application for deployment.
+5. Currently all data is provided in interna JSON files, update the application to pull this data from a RESTful API backend.

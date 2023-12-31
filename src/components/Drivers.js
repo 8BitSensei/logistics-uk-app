@@ -46,7 +46,7 @@ export default function Drivers() {
         return activityTime;
     }
     
-    function driver(driver){
+    function getDriver(driver){
         let totalMinutes = driver.traces.map((trace) => {
             return getMinutes(trace);
         });
@@ -83,7 +83,7 @@ export default function Drivers() {
                 </TableHead>
                 <TableBody>
                 {drivers.map((row) => (
-                        driver(row)
+                        getDriver(row)
                     ))}
                 </TableBody>
             </Table>
