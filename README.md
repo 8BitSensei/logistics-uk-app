@@ -6,7 +6,7 @@ The application provides routing for four pages as defined in the `src/data/menu
 
 The `Drivers` component is the core functionality of the application, the presented table is populated from the `src/data/drivers.json`. It provides the driver name, vehicle registration, and time worked in minutes, split by drive, rest, work, and available time. The final cell is occupied by a `Trace` component, which generates a set of formatted boxes for each day of the week, if the driver has a trace for a given day, it is filled in green. 
 ### Running
-To run the application, simply run the command `npm start` in the `logistics-uk-app/` directory, it will launch on port `3000`, if this unavailable you will be prompted to accept another port.
+To run the application, first install the required node modules with `npm install` and simply run the command `npm start` in the `logistics-uk-app/` directory, it will launch on port `3000`, if this unavailable you will be prompted to accept another port.
 ### Improvements
 1. Centralise style sheets, avoid hardcoding styles into components.
 2. Provide more testing through the `npm test` command.
